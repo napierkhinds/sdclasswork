@@ -1,9 +1,8 @@
 package unit_2;
 
 import javax.swing.*;
-import java.util.Scanner;
 
-public class vowels {
+public class Q3_vowels {
     public static  void main(String args[]) {
         String output;
         String charAsString;
