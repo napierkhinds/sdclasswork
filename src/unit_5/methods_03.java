@@ -2,8 +2,7 @@
 //Methods: Passing one parameter into a method
 package unit_5;
 import javax.swing.JOptionPane;
-import java.util.Arrays;
-import java.util.Scanner;
+
 
 public class methods_03 {
     public  static void main(String args[]) {

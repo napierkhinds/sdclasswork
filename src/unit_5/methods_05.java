@@ -1,4 +1,4 @@
-//
+//Methods: Passing multiple parameters
 package unit_5;
 import javax.swing.JOptionPane;
 
@@ -15,7 +15,7 @@ public class methods_05 {
 
     printDetails(name, age);
 
-    }//ed main
+    }//end main
 
         public static void printDetails (String aName, int anAge) {
 
