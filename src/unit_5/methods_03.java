@@ -1,31 +1,42 @@
+// Demonstrates passing a parameter (age) to a method in Java.
+// Uses JOptionPane for input/output dialogs.
 
-//Methods: Passing one parameter into a method
-package unit_5;
+package unit_5;  // Package declaration (organizes related classes)
+
+// Import JOptionPane for GUI dialogs
 import javax.swing.JOptionPane;
 
-
 public class methods_03 {
-    public  static void main(String args[]) {
-        String ageAsString;
-        int age;
 
-        //read in age
+    // Main method - program entry point
+    public static void main(String args[]) {
+        String ageAsString;  // Stores user input (age as text)
+        int age;            // Stores converted age (as integer)
+
+        // 1. Read age from user via input dialog
         ageAsString = JOptionPane.showInputDialog("Enter your age");
+
+        // 2. Convert String input to integer (throws NumberFormatException if invalid)
         age = Integer.parseInt(ageAsString);
 
-        //call method printAge to display age
+        // 3. Call printAge() and pass the 'age' as an argument
         printAge(age);
 
-    }//end main
+    } // end main method
 
-    public static void printAge(int anAge){
-
+    /**
+     * Displays the user's age in a dialog box.
+     * @param anAge The age to display (passed from main method).
+     */
+    public static void printAge(int anAge) {
         String output;
 
-        output = ("You are " +anAge + " years old");
+        // Create the output message
+        output = "You are " + anAge + " years old";
+
+        // Show the message in a dialog box
         JOptionPane.showMessageDialog(null, output);
 
-    }//end of prtintAge
+    } // end printAge method
 
-
-}//end class method_08
+} // end class methods_03

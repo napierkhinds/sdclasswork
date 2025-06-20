@@ -1,28 +1,49 @@
-//Methods: Passing multiple parameters
-package unit_5;
+// Demonstrates passing multiple parameters to a method
+// Uses JOptionPane for GUI input/output
+
+package unit_5;  // Package declaration
+
+// Import required class for GUI dialogs
 import javax.swing.JOptionPane;
 
 public class methods_05 {
-    public  static void main(String args[]) {
 
-    String ageAsString, name;
-    int age;
+    // Main method - program entry point
+    public static void main(String args[]) {
+        // Variable declarations
+        String ageAsString;  // Stores age input as text
+        String name;         // Stores user's name
+        int age;             // Stores converted age as integer
 
-    name = JOptionPane.showInputDialog(null, "Enter your name");
-    ageAsString = JOptionPane.showInputDialog(null, "Enter your age");
-    age = Integer.parseInt(ageAsString);
+        // 1. Get user input for name
+        name = JOptionPane.showInputDialog(null, "Enter your name");
 
+        // 2. Get user input for age
+        ageAsString = JOptionPane.showInputDialog(null, "Enter your age");
 
-    printDetails(name, age);
+        // 3. Convert age from String to int
+        age = Integer.parseInt(ageAsString);
 
-    }//end main
+        // 4. Call printDetails() method with two arguments
+        printDetails(name, age);
 
-        public static void printDetails (String aName, int anAge) {
+    } // end main method
 
-        String output;
-        output = "Name: " + aName + "\n" + "Age: " + anAge;
+    /**
+     * Displays user details in a formatted message
+     *
+     * @param aName The user's name (String)
+     * @param anAge The user's age (int)
+     */
+    public static void printDetails(String aName, int anAge) {
+        String output;  // Stores formatted output message
+
+        // Create formatted output with name and age
+        output = "Name: " + aName + "\n" +  // \n creates a new line
+                "Age: " + anAge;           // age continues on next line
+
+        // Display the output in a dialog box
         JOptionPane.showMessageDialog(null, output);
+    } // end printDetails method
 
-        }
-
-}//end class
+} // end class methods_05
