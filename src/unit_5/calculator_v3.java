@@ -8,7 +8,11 @@ public class calculator_v3 {
         String number1, number2, operator;
         int num1, num2, result, op;
 
-        operator = JOptionPane.showInputDialog("Enter Operator 1. Addition, 2. Subtraction, 3. Multiplication, 4. Division");
+        operator = JOptionPane.showInputDialog("Enter Operator \n"
+                                                +"1. Addition \n"
+                                                + "2. Subtraction \n"
+                                                + "3. Multiplication \n"
+                                                + "4. Division");
 
         op = Integer.parseInt(operator);
 
