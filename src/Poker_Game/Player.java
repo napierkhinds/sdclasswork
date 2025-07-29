@@ -5,13 +5,16 @@ import javax.swing.JOptionPane;
 public class Player {
     private int bank;
 
+    public Player(int defaultAmount) {
+        this.bank = defaultAmount;
+    }
+
+
     public boolean canBet(int amount) {
         return amount <= bank;
     }
 
-    public Player(int defaultAmount) {
-        this.bank = defaultAmount;
-    }
+
 
     public void addToBank(int amount) {
         bank += amount;
@@ -33,5 +36,15 @@ public class Player {
 
     public void showMessage(String message) {
         JOptionPane.showMessageDialog(null, message);
+    }
+
+    private String name;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
     }
 }
